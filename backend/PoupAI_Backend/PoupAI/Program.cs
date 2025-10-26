@@ -28,7 +28,7 @@ namespace PoupAI
                         .AllowAnyMethod());           
             });
 
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            var connectionString = "Host=shuttle.proxy.rlwy.net;Port=35560;Username=usuario;Password=senha;Database=nome_do_banco;Pooling=true;SSL Mode=Require;Trust Server Certificate=true";
 
             builder.Services.AddScoped<UsuarioRepository>(_ => new UsuarioRepository(connectionString));
             builder.Services.AddScoped<ReceitaRepository>(_ => new ReceitaRepository(connectionString));
